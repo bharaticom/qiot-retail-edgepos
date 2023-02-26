@@ -39,11 +39,14 @@ public class BillUnitResource {
         instance.fire();
         instance.dispose();
 
-		PosUpdate posUpdate = new PosUpdate();
-		UUID uuid = UUID.randomUUID();
-		posUpdate.updateText = uuid.toString();
+		if (unitDTO.isCheckout) {
+			LOGGER.info("Checkout!");
+			PosUpdate posUpdate = new PosUpdate();
+			UUID uuid = UUID.randomUUID();
+			posUpdate.updateText = uuid.toString();
 
-		posUpdateEmitter.send(posUpdate);
+			posUpdateEmitter.send(posUpdate);
+		}
 
         return unitDTO; 
     }
