@@ -7,6 +7,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import io.smallrye.reactive.messaging.kafka.Record;
+
+import org.eclipse.microprofile.reactive.messaging.Outgoing;
+
+import javax.enterprise.context.ApplicationScoped;
+
 import org.drools.hackfest2022.model.Item;
 import org.drools.hackfest2022.model.ItemCategory;
 
