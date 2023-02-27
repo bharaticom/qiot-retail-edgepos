@@ -17,6 +17,7 @@ public class BillUnitData implements RuleUnitData {
     private SingletonStore<Number> subtotal;
     private SingletonStore<Number> discount;
     private SingletonStore<Number> total;
+	public boolean isCheckout;
 
     public BillUnitData() {
         this(DataSource.createStore(), DataSource.createStore(), null);
