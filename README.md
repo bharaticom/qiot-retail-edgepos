@@ -1,4 +1,4 @@
-# demo20220831-edgepos Project
+# qiot-retail-edgepos
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
